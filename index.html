@@ -5,29 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>hotplug1n</title>
   
-  <!-- Fontes do Google -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400&display=swap" rel="stylesheet">
-  
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
   <div id="container">
     <div id="profile">
-
-
-<div id="switch" onclick= "toggleMode()">
-  <button></button>
-  <span></span>
-</div>
-
+      <div id="switch" onclick="toggleMode()">
+        <button></button>
+        <span></span>
+      </div>
       <img src="./assets/Theme=Dark mode.png" alt="Foto anime, asiatico.">
       <p>@hotplug1n</p>
     </div>
     <ul>
       <li>
-        <a href="#" target="_blank">biografia</a>
+        <a href="#" id="biografia">biografia</a>
         <ul>
-          <li><a href="https://github.com/hotplug1n" target="_blank">veja meu portfólio</a></li>
+          <li><a href="https://github.com/hotplug1n?tab=repositories" target="_blank">veja meu portfólio</a></li>
         </ul>
       </li>
     </ul>
@@ -41,20 +36,15 @@
       </div>
     </div>
   </div>
-<style>
-        ion-icon {
-            font-size: 36px;
-            cursor: pointer;
-            color: #333;
-            transition: color 0.5s ease;
-        }
-        ion-icon:hover {
-            color: #bababa;
-        }
-    </style>
-
-  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-  <script src="script.js"></script>
+  <div id="biografia-content" class="hidden">
+    <p>Meu nome é Yuri, tenho 18 anos e sou do Rio de Janeiro. Desde os 9 anos, estudo programação de forma autodidata, o que me levou a me aprofundar em diversas linguagens e ferramentas ao longo dos anos. Tenho experiência com linguagens como Python, CSS, Java e HTML, e sou apaixonado por desenvolver soluções criativas e eficientes.</p>
+    <p>Meu interesse pela área de cibersegurança começou cedo, o que me motivou a aprender sobre testes de penetração, análise de redes e segurança de sistemas. A maior parte da minha experiência prática foi com distribuições Linux voltadas para segurança, como Kali Linux, BackBox, ArchStrike e Pentoo. Através dessas ferramentas, aprendi a realizar auditorias de segurança, identificar vulnerabilidades e fortalecer sistemas. Além disso, me especializei no uso do Linux, o que se tornou essencial para meus estudos e trabalho na área.</p>
+    <p>Sou apaixonado por computação e tenho como objetivo seguir carreira em redes e segurança cibernética, com o desejo de atuar como consultor ou analista de segurança. No entanto, também tenho grande interesse em programação, e gostaria de seguir uma carreira como programador, se possível. Busco constantemente me atualizar sobre as novas tendências das áreas de segurança e desenvolvimento, visando contribuir para a criação de ambientes digitais mais seguros e desenvolver soluções inovadoras.</p>
+    <button id="voltar">Voltar</button>
+  </div>
+  
+  <script src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js" type="module"></script>
+  <script src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js" nomodule></script>
+  <script src="./script.js"></script>
 </body>
 </html>

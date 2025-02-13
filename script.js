@@ -56,3 +56,51 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 2000 + 500 * index) // Cada link aparece com um pequeno atraso
   })
 })
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Função para mostrar a biografia com animação de slide e fade
+  const biografiaButton = document.getElementById("biografia")
+  const biografiaContent = document.getElementById("biografia-content")
+  const container = document.getElementById("container")
+  const voltarButton = document.getElementById("voltar")
+
+  biografiaButton.addEventListener("click", function () {
+    // Anima a transição para a biografia
+    container.classList.add("hidden")
+    setTimeout(() => {
+      biografiaContent.classList.add("visible")
+      voltarButton.classList.add("visible")
+    }, 1000) // Espera o fade-out do container
+  })
+
+  // Função para voltar à tela inicial
+  voltarButton.addEventListener("click", function () {
+    biografiaContent.classList.remove("visible")
+    voltarButton.classList.remove("visible")
+    container.classList.remove("hidden")
+  })
+})
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const voltarButton = document.getElementById("voltar")
+  const container = document.getElementById("container")
+  const biografiaContent = document.getElementById("biografia-content")
+
+  voltarButton.addEventListener("click", function () {
+    // Aplica o fade-out na tela de biografia
+    biografiaContent.classList.remove("visible")
+    voltarButton.classList.remove("visible")
+
+    // Aplica o fade-in na tela inicial
+    container.classList.add("fade-in")
+
+    // Espera o tempo da animação de fade para reiniciar a visibilidade
+    setTimeout(() => {
+      container.classList.remove("fade-in", "hidden")
+      biografiaContent.classList.remove("visible")
+    }, 1000) // Tempo de fade-out
+  })
+})
