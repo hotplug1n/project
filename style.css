@@ -9,6 +9,45 @@ body {
   transition: background 1s ease-in-out, opacity 2s ease-out;
 }
 
+@media (max-width: 768px) {
+  body {
+    font-size: 14px; /* Tamanhos menores para melhor leitura */
+  }
+  
+  #container {
+    width: 95%;
+    padding: 20px;
+  }
+
+  #switch {
+    width: 40px; /* Reduzir tamanho do switch */
+  }
+
+  ion-icon {
+    font-size: 24px; /* Ícones menores para mobile */
+  }
+}
+
+button {
+  padding: 10px 16px;
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  button {
+    padding: 12px;
+    font-size: 18px; /* Melhor usabilidade para toques */
+  }
+}
+
+@media (max-width: 768px) {
+  #voltar {
+    left: 50px; /* Move mais para a direita no mobile */
+    bottom: 40px; /* Ajusta a posição para evitar cortes */
+  }
+}
+
+
 body.fade {
   opacity: 0;
 }
@@ -263,7 +302,7 @@ ul li a:nth-child(2) {
 #voltar {
   position: fixed;
   bottom: -300px;
-  left: -100px;
+  left: -50px;
   background-color: transparent;
   color: var(--text-color);
   font-size: 18px;
